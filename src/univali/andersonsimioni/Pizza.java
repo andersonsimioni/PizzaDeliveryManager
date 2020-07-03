@@ -49,6 +49,18 @@ public class Pizza {
         return null;
     }
 
+    public String getName() {
+        return Name;
+    }
+
+    public ArrayList<String> getFlavors() {
+        return Flavors;
+    }
+
+    public float getSizePrice(String size) {
+        return SizesPrices.get(size);
+    }
+
     public Pizza(String name) {
         if(name.isEmpty())
             throw new IllegalArgumentException("Name is empty");
