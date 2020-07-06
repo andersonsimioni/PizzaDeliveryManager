@@ -2,6 +2,7 @@ package univali.andersonsimioni;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class Pizza {
@@ -35,6 +36,19 @@ public class Pizza {
             throw new IllegalArgumentException("Pizza already have this size");
 
         SizesPrices.put(sizeName, price);
+    }
+
+    @Override
+    public String toString(){
+        String pizza = Name + "\n -Flavors:";
+        for (String s:Flavors)
+            pizza += "  " + s + ",\n";
+
+        pizza += " -SizesPrices:\n";
+        for(Map.Entry<String, Float> entry : SizesPrices.entrySet())
+            pizza += "  " + entry.getKey() + "= " + entry.getValue() + ",\n";
+
+        return pizza;
     }
 
     /**
