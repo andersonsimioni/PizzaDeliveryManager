@@ -6,7 +6,7 @@ import univali.andersonsimioni.unitTest.TestPizza;
 public class Main {
 
     public static void main(String[] args) {
-        //TestPizza.run();
-        TestFile.run();
+        TestPizza.testArray();
+        //TestFile.run();
     }
 }

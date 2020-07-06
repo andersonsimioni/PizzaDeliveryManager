@@ -12,6 +12,6 @@ import univali.andersonsimioni.File;
 public class TestFile {
 
     public static void run(){
-        File.getPizzasByFile("sources/pizzas.json");
+        //File.getPizzasByFile("sources/pizzas.json");
     }
 }

@@ -4,5 +4,11 @@
       "Molho","Mussarela","Alho frito no Azeite","Parmesão","Azeitonas"
     ],
     "prices": {"small":0.1,"medium":1.0,"large":2.0}
+  },
+  "ALHO E Batata" : {
+    "flavors" : [
+      "Molho","Mussarela","Alho frito no Azeite","Parmesão","Azeitonas"
+    ],
+    "prices": {"small":0.1,"medium":1.0,"large":2.0}
   }
 }
