@@ -50,10 +50,10 @@ public class File {
                         } else if(type.toString().equals("prices")){
                             try {
                                 JSONObject prices = (JSONObject) new JSONParser().parse(info.toString());
-                                System.out.println(prices.get("small"));
-                                //pizza.AddSizePrice("small", (Double) prices.get("small"));
-                                //pizza.AddSizePrice("medium", (float) prices.get("medium"));
-                                //pizza.AddSizePrice("large", (float) prices.get("large"));
+                                //System.out.println(prices.get("small"));
+                                pizza.AddSizePrice("small", (Double) prices.get("small"));
+                                pizza.AddSizePrice("medium", (Double) prices.get("medium"));
+                                pizza.AddSizePrice("large", (Double) prices.get("large"));
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
@@ -63,7 +63,7 @@ public class File {
                     e.printStackTrace();
                 }
 
-                //System.out.println(pizza.getFlavors());
+                System.out.println(pizza.getFlavors());
             });
         } catch (FileNotFoundException e) {
             e.printStackTrace();
