@@ -6,10 +6,14 @@ import java.util.HashMap;
 public class Order {
     private final int OrderId;
     private final int ClientId;
-    private final HashMap<Integer, String> PizzasId;
+    private final ArrayList<Integer> PizzasId;
 
-    public void AddPizza(){
+    public void AddPizza(int pizzaId){
+        PizzasId.add(pizzaId);
+    }
 
+    public void RemovePizza(int pizzaId){
+        
     }
 
     public Order(int orderId, int clientId) {
@@ -20,6 +24,6 @@ public class Order {
 
         OrderId = orderId;
         ClientId = clientId;
-        PizzasId = new HashMap<Integer, String>();
+        PizzasId = new ArrayList<Integer>();
     }
 }
