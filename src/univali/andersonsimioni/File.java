@@ -5,23 +5,36 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class File {
 
-    /**
-     * Read lines of file and return array of string,
-     * each item is a line of file
-     * @param path
-     * @return
-     */
-    public static ArrayList<String> readFile(String path){
-
-        return null;
+    public static void saveClients(ArrayList<Client> clients, String path){
+        try {
+            FileOutputStream file = new FileOutputStream(path);
+            ObjectOutputStream clientsFile = new ObjectOutputStream(file);
+            clientsFile.writeObject(clients);
+            clientsFile.flush();
+            clientsFile.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    public static ArrayList<Client> readClients(String path){
+        try {
+            FileInputStream file = new FileInputStream(path);
+            ObjectInputStream clients = new ObjectInputStream(file);
+
+            return (ArrayList<Client>) clients.readObject();
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }

@@ -2,7 +2,7 @@ package univali.andersonsimioni;
 
 import java.io.Serializable;
 
-public class Client {
+public class Client implements Serializable {
     private final int Id;
     private final String Name;
 
