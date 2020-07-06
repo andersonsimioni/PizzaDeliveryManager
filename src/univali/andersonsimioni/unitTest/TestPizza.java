@@ -2,8 +2,10 @@ package univali.andersonsimioni.unitTest;
 
 import univali.andersonsimioni.Pizza;
 
+import java.util.ArrayList;
+
 public class TestPizza {
-    public static void run(){
+    public static void testAPizza(){
         univali.andersonsimioni.Pizza pizza = new Pizza("ALHO E ÓLEO");
 
         pizza.AddSizePrice("big",16.00);
@@ -26,5 +28,10 @@ public class TestPizza {
         System.out.printf("medium %f\n", pizza.getSizePrice("medium"));
         System.out.printf("Small %f\n", pizza.getSizePrice("small"));
 
+    }
+
+    public static void testArray(){
+        ArrayList<Pizza> pizzas = Pizza.getPizzasByFile("sources/pizzas.json");
+        System.out.println(pizzas.get(1).getName());
     }
 }
