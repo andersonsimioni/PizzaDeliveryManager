@@ -1,0 +1,8 @@
+{
+  "ALHO E ÓLEO" : {
+    "flavors" : [
+      "Molho","Mussarela","Alho frito no Azeite","Parmesão","Azeitonas"
+    ],
+    "prices": {"small":0,"medium":1,"big":2}
+  }
+}

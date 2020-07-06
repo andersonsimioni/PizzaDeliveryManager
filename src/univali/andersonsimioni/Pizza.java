@@ -2,13 +2,11 @@ package univali.andersonsimioni;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
 
 public class Pizza {
     private final String Name;
     private final ArrayList<String> Flavors;
-    private final HashMap<String, Float> SizesPrices;
+    private final HashMap<String, Double> SizesPrices;
 
     /**
      * Add flavor to pizza
@@ -27,7 +25,7 @@ public class Pizza {
      * @param sizeName
      * @param price
      */
-    public void AddSizePrice(String sizeName, Float price){
+    public void AddSizePrice(String sizeName, Double price){
         if(sizeName.isEmpty())
             throw new IllegalArgumentException("Empty pizza size name");
         if(price <= 0)
@@ -36,19 +34,6 @@ public class Pizza {
             throw new IllegalArgumentException("Pizza already have this size");
 
         SizesPrices.put(sizeName, price);
-    }
-
-    @Override
-    public String toString(){
-        String pizza = Name + "\n -Flavors:";
-        for (String s:Flavors)
-            pizza += "  " + s + ",\n";
-
-        pizza += " -SizesPrices:\n";
-        for(Map.Entry<String, Float> entry : SizesPrices.entrySet())
-            pizza += "  " + entry.getKey() + "= " + entry.getValue() + ",\n";
-
-        return pizza;
     }
 
     /**
@@ -63,12 +48,24 @@ public class Pizza {
         return null;
     }
 
+    public String getName() {
+        return Name;
+    }
+
+    public ArrayList<String> getFlavors() {
+        return Flavors;
+    }
+
+    public Double getSizePrice(String size) {
+        return SizesPrices.get(size);
+    }
+
     public Pizza(String name) {
         if(name.isEmpty())
             throw new IllegalArgumentException("Name is empty");
 
         Name = name;
         Flavors = new ArrayList<String>();
-        SizesPrices = new HashMap<String, Float>();
+        SizesPrices = new HashMap<String, Double>();
     }
 }
