@@ -2,12 +2,11 @@ package univali.andersonsimioni;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.stream.Stream;
 
 public class Pizza {
     private final String Name;
     private final ArrayList<String> Flavors;
-    private final HashMap<String, Float> SizesPrices;
+    private final HashMap<String, Double> SizesPrices;
 
     /**
      * Add flavor to pizza
@@ -26,7 +25,7 @@ public class Pizza {
      * @param sizeName
      * @param price
      */
-    public void AddSizePrice(String sizeName, Float price){
+    public void AddSizePrice(String sizeName, Double price){
         if(sizeName.isEmpty())
             throw new IllegalArgumentException("Empty pizza size name");
         if(price <= 0)
@@ -57,7 +56,7 @@ public class Pizza {
         return Flavors;
     }
 
-    public float getSizePrice(String size) {
+    public Double getSizePrice(String size) {
         return SizesPrices.get(size);
     }
 
@@ -67,6 +66,6 @@ public class Pizza {
 
         Name = name;
         Flavors = new ArrayList<String>();
-        SizesPrices = new HashMap<String, Float>();
+        SizesPrices = new HashMap<String, Double>();
     }
 }
