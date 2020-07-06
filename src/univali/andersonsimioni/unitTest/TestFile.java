@@ -21,11 +21,19 @@ public class TestFile {
         clients.add(client1);
         clients.add(client2);
 
-        File.saveClients(clients, "sources/clients.dat");
+        if(File.saveClients(clients, "sources/clients.dat")){
+            System.out.println("Saved");
+        } else {
+            System.out.println("Error on save clients");
+        }
     }
 
     public static void readClients(){
         ArrayList<Client> clients = File.readClients("sources/clients.dat");
-        System.out.println(clients.get(1).getName());
+        if(clients != null) {
+            System.out.println(clients.get(1).getName());
+        } else {
+            System.out.println("file not recovered");
+        }
     }
 }

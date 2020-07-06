@@ -10,18 +10,20 @@ import java.util.ArrayList;
 
 public class File {
 
-    public static void saveClients(ArrayList<Client> clients, String path){
+    public static boolean saveClients(ArrayList<Client> clients, String path){
         try {
             FileOutputStream file = new FileOutputStream(path);
             ObjectOutputStream clientsFile = new ObjectOutputStream(file);
             clientsFile.writeObject(clients);
             clientsFile.flush();
             clientsFile.close();
+            return true;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
     public static ArrayList<Client> readClients(String path){
