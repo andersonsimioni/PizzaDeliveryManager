@@ -19,10 +19,6 @@ public class Restaurant {
         Clients.add(new Client(id, name));
     }
 
-    public void addPizza(){
-        
-    }
-
     public  boolean haveClient(int clientId){
         for (Client cl:
              Clients) {

@@ -11,7 +11,7 @@ public class Order {
     public void AddPizza(int pizzaId){
         if(pizzaId < 0)
             throw new IllegalArgumentException("Pizza id is smaller than zero");
-        
+
         PizzasId.add(pizzaId);
     }
 

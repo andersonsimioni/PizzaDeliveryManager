@@ -44,18 +44,6 @@ public class Pizza {
         SizesPrices.put(sizeName, price);
     }
 
-    /**
-     * Load pizza data info from file
-     * @param sizeCount
-     * @param data
-     * @return
-     */
-    public static Pizza LoadFromFileStringData(int sizeCount, String data){
-        String[] lines = (String[]) data.lines().toArray();
-
-        return null;
-    }
-
     public String getName() {
         return Name;
     }
