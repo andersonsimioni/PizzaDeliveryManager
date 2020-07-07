@@ -5,10 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 
 
@@ -69,9 +66,24 @@ public class Client implements Serializable {
         try {
             FileReader file = new FileReader(path);
             Object obj = new JSONParser().parse(file);
-            JSONObject clientFile = (JSONObject) obj;
+            JSONArray clientFile = (JSONArray) obj;
 
+            clientFile.forEach((client)->{
+                try {
+                    JSONObject clientInfo = (JSONObject) new JSONParser().parse(client.toString());
+                    Client newClient = new Client(
+                            ((Long) clientInfo.get("id")).intValue(),
+                            (String) clientInfo.get("name"),
+                            (String) clientInfo.get("phone"),
+                            (String) clientInfo.get("CPF"),
+                            (String) clientInfo.get("address")
+                    );
+                    clients.add(newClient);
 
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            });
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -81,4 +93,6 @@ public class Client implements Serializable {
         }
         return clients;
     }
+
+
 }
