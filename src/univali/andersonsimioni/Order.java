@@ -29,7 +29,6 @@ public class Order {
         if(pizzaId < 0)
             throw new IllegalArgumentException("Pizza id is smaller than zero");
 
-<<<<<<< HEAD
         switch (size) {
             case "small" -> PizzasSizes.add(pizzaSize.small);
             case "medium" -> PizzasSizes.add(pizzaSize.medium);
@@ -37,8 +36,6 @@ public class Order {
             default -> throw new IllegalArgumentException("Invalid pizza size, accepted: small, medium, large");
         }
 
-=======
->>>>>>> bb517f8d47a06a757b965d1c8c4f7917a21e2454
         PizzasId.add(pizzaId);
     }
 
