@@ -47,6 +47,30 @@ public class Restaurant {
         Orders = orders;
     }
 
+    @Override
+    public String toString() {
+        String str = "Restaurant{" +
+                "Clients=";
+        for (Client c:
+             Clients) {
+            str += c.toString() + ",\n";
+        }
+        str+="\n, Pizzas=";
+        for (Pizza c:
+                Pizzas) {
+            str += c.toString() + ",\n";
+        }
+        str+="\n, Orders=";
+        for (Order c:
+                Orders) {
+            str += c.toString() + ",\n";
+        }
+
+        str+="\n}";
+
+        return str;
+    }
+
     public Restaurant() {
         Clients = new ArrayList<Client>();
         Pizzas = new ArrayList<Pizza>();

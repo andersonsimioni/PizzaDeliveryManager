@@ -60,6 +60,17 @@ public class Client implements Serializable {
         return Address;
     }
 
+    @Override
+    public String toString() {
+        return "Client{\n" +
+                "Id=" + Id + "\n" +
+                ", Name='" + Name + '\'' + "\n" +
+                ", Phone='" + Phone + '\'' + "\n" +
+                ", CPF='" + CPF + '\'' + "\n" +
+                ", Address='" + Address + '\'' + "\n" +
+                '}' + "\n";
+    }
+
     public static ArrayList<Client> getClientsByFile(String path){
         ArrayList<Client> clients = new ArrayList();
 

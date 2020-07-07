@@ -5,11 +5,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.print.DocFlavor;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 
 public class Pizza {
     private final String Name;
@@ -63,6 +65,25 @@ public class Pizza {
         Name = name;
         Flavors = new ArrayList<String>();
         SizesPrices = new HashMap<String, Double>();
+    }
+
+    @Override
+    public String toString() {
+        String str = "Pizza{" +
+                "Name='" + Name + '\'' +
+                ", Flavors=";
+
+        for (String s:Flavors) {
+            str += s + ", ";
+        }
+        str += "\n";
+
+        str += "Sizes prices= ";
+        for (Double d:SizesPrices.values()) {
+            str += d + ", ";
+        }
+
+        return str;
     }
 
     public static ArrayList<Pizza> getPizzasByFile(String path){

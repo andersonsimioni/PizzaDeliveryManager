@@ -64,6 +64,19 @@ public class Order {
         }
     }
 
+    public String toString() {
+        String str = "Order{" +
+                "OrderId=" + OrderId +
+                ", ClientId=" + ClientId;
+                str += ", PizzasId=\n";
+        for (Integer i:
+             PizzasId) {
+            str += i + ", ";
+        }
+
+        return str;
+    }
+
     public Order(int orderId, int clientId) {
         if(orderId < 0)
             throw new IllegalArgumentException("orderId is smaller than zero");
