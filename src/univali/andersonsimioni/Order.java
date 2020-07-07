@@ -9,11 +9,23 @@ public class Order {
     private final ArrayList<Integer> PizzasId;
 
     public void AddPizza(int pizzaId){
+        if(pizzaId < 0)
+            throw new IllegalArgumentException("Pizza id is smaller than zero");
+        
         PizzasId.add(pizzaId);
     }
 
     public void RemovePizza(int pizzaId){
-        
+        if(pizzaId < 0)
+            throw new IllegalArgumentException("Pizza id is smaller than zero");
+
+        for (Integer p:
+             PizzasId) {
+            if(p == pizzaId){
+                PizzasId.remove(p);
+                return;
+            }
+        }
     }
 
     public Order(int orderId, int clientId) {
