@@ -8,15 +8,15 @@ public class TestPizza {
     public static void testAPizza(){
         univali.andersonsimioni.Pizza pizza = new Pizza("ALHO E ÓLEO");
 
-        pizza.AddSizePrice("big",16.00);
-        pizza.AddSizePrice("medium",18.00);
-        pizza.AddSizePrice("small",20.00);
+        pizza.addSizePrice("big",16.00);
+        pizza.addSizePrice("medium",18.00);
+        pizza.addSizePrice("small",20.00);
 
-        pizza.AddFlavor("Molho");
-        pizza.AddFlavor("Mussarela");
-        pizza.AddFlavor("Alho frito no Azeite");
-        pizza.AddFlavor("Parmesão");
-        pizza.AddFlavor("Azeitonas");
+        pizza.addFlavor("Molho");
+        pizza.addFlavor("Mussarela");
+        pizza.addFlavor("Alho frito no Azeite");
+        pizza.addFlavor("Parmesão");
+        pizza.addFlavor("Azeitonas");
 
         System.out.printf("Name: %s\n", pizza.getName());
         System.out.println("-----------");
