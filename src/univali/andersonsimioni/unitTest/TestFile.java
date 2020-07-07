@@ -13,6 +13,9 @@ import univali.andersonsimioni.File;
 
 public class TestFile {
 
+    /**
+     * Test function where we save clients in a file
+     */
     public static void saveClients(){
         Client client1 = new Client(1, "willian");
         Client client2 = new Client(2, "anderson");
@@ -28,6 +31,9 @@ public class TestFile {
         }
     }
 
+    /**
+     * test function where we read file, and show infos for object
+     */
     public static void readClients(){
         ArrayList<Client> clients = File.readClients("sources/clients.dat");
         if(clients != null) {
