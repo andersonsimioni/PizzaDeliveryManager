@@ -6,6 +6,7 @@ public class Restaurant {
     private final ArrayList<Client> Clients;
     private final ArrayList<Pizza> Pizzas;
     private final ArrayList<Order> Orders;
+    private final String Name;
 
     /**
      * Add new client to restaurant system
@@ -17,6 +18,10 @@ public class Restaurant {
 
         int id = Clients.size();
         //Clients.add(new Client(id, name));
+    }
+
+    public void addClientsByFile(String path){
+        Clients.addAll(Client.getClientsByFile(path));
     }
 
     public  boolean haveClient(int clientId){
@@ -39,12 +44,14 @@ public class Restaurant {
 
         int id = Orders.size();
         Order order = new Order(id, clientId);
+        Orders.add(order);
     }
 
-    public Restaurant(ArrayList<Client> clients, ArrayList<Pizza> pizzas, ArrayList<Order> orders) {
+    public Restaurant(ArrayList<Client> clients, ArrayList<Pizza> pizzas, ArrayList<Order> orders, String name) {
         Clients = clients;
         Pizzas = pizzas;
         Orders = orders;
+        Name = name;
     }
 
     @Override
@@ -71,9 +78,26 @@ public class Restaurant {
         return str;
     }
 
-    public Restaurant() {
+    public Restaurant(String name) {
         Clients = new ArrayList<Client>();
         Pizzas = new ArrayList<Pizza>();
         Orders = new ArrayList<Order>();
+        Name = name;
+    }
+
+    public ArrayList<Client> getClients() {
+        return Clients;
+    }
+
+    public ArrayList<Pizza> getPizzas() {
+        return Pizzas;
+    }
+
+    public ArrayList<Order> getOrders() {
+        return Orders;
+    }
+
+    public String getName() {
+        return Name;
     }
 }
