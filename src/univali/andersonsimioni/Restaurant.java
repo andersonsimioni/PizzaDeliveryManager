@@ -16,7 +16,7 @@ public class Restaurant {
             throw new IllegalArgumentException("name is empty");
 
         int id = Clients.size();
-        Clients.add(new Client(id, name));
+        //Clients.add(new Client(id, name));
     }
 
     public  boolean haveClient(int clientId){

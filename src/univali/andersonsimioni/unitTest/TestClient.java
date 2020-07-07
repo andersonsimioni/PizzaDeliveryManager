@@ -10,7 +10,7 @@ public class TestClient {
      * function to test Client class
      */
     public static void addClient(){
-        Client client = new Client(1, "Willian de Souza");
+        Client client = new Client(1, "Willian de Souza", "1232", "asdasd", "123");
         System.out.printf("Id: %d\n", client.getId());
         System.out.printf("Name: %s", client.getName());
     }
