@@ -1,0 +1,36 @@
+format 222
+
+classcanvas 128123 class_ref 128123 // Client
+  classdiagramsettings hide_attributes no hide_operations no member_max_width 0 end
+  xyzwh 22.5 4.5 2000 241 245
+  constraint 128251
+    hidden
+    end
+    ""
+      xyzwh 278.5 264.5 2000 35 36
+end
+classcanvas 128507 class_ref 128251 // Order
+  classdiagramsettings member_max_width 0 end
+  xyz 351 80 2006
+  constraint 128635
+    hidden
+    end
+    ""
+      xyzwh 584 121 2000 35 36
+end
+classcanvas 128891 class_ref 128379 // Pizza
+  classdiagramsettings member_max_width 0 end
+  xyz 99 326 2006
+  constraint 129019
+    hidden
+    end
+    ""
+      xyzwh 330 367 2000 35 36
+end
+line 128379 -_-_ decenter_begin 565
+  from ref 128123 z 2001 to ref 128251
+line 128763 -_-_
+  from ref 128507 z 2007 to ref 128635
+line 129147 -_-_
+  from ref 128891 z 2007 to ref 129019
+end

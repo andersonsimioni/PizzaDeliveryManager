@@ -1,0 +1,422 @@
+format 222
+"andersonsimioni" // univali::andersonsimioni
+  revision 1
+  modified_by 123 "DEBUG"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128123 "main_classes_view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128123 "main_classes_diagram"
+      classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context uml show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 show_parameter_dir yes show_parameter_name yes package_name_in_tab yes show_context_mode uml show_relation_modifiers yes show_relation_visibility yes show_infonote yes shadow yes gradient diag show_stereotype_properties yes end
+      size A4
+    end
+
+    class 128123 "Client"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128123 "Id"
+	const_attribute private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128251 "Name"
+	const_attribute private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128379 "Phone"
+	const_attribute private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128507 "CPF"
+	const_attribute private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128635 "Address"
+	const_attribute private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 128251 "getId"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128379 "getName"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128507 "getPhone"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128635 "getCPF"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128763 "toString"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128891 "getClientsByFile"
+	public explicit_return_type "ArrayList<Client>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129019 "getAddress"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128251 "Order"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128763 "OrderId"
+	const_attribute private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128891 "ClientId"
+	const_attribute private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129019 "PizzasId"
+	const_attribute private explicit_type "ArrayList<Intenger>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129147 "PizzasSizes"
+	const_attribute private explicit_type "ArrayList<pizzaSize>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 129147 "AddPizza"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "pizzaId" explicit_type "int"
+	  param in name "size" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 129275 "getPizzasIds"
+	public explicit_return_type "ArrayList<Intenger>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 129403 "getPizzaSizeByIndex"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "index" explicit_type "Intenger"
+	
+	
+	
+	
+	
+      end
+
+      operation 129531 "getPizzaIdByIndex"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "index" explicit_type "Intenger"
+	
+	
+	
+	
+	
+      end
+
+      operation 129659 "RemovePizza"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "pizzaId" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 129787 "toString"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128379 "Pizza"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129275 "Name"
+	const_attribute private explicit_type "String"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129403 "Flavors"
+	const_attribute private explicit_type "ArrayList<String>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129531 "SizesPrices"
+	const_attribute private explicit_type "HashMap<String, Double>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 129915 "addFlavor"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "Name" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 130043 "addSizePrice"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "sizeName" explicit_type "String"
+	  param in name "price" explicit_type "Double"
+	
+	
+	
+	
+	
+      end
+
+      operation 130171 "getName"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 130299 "getSizePrice"
+	public explicit_return_type "double"
+	nparams 1
+	  param in name "size" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 130427 "getFlavors"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 130555 "toString"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+  end
+end

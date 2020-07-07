@@ -21,7 +21,7 @@ public class Pizza {
     /**
      * Add flavor to pizza
      */
-    public void AddFlavor(String name){
+    public void addFlavor(String name){
         if(name.isEmpty())
             throw new IllegalArgumentException("Empty pizza flavor name");
         if(Flavors.contains(name))
@@ -35,7 +35,7 @@ public class Pizza {
      * @param sizeName
      * @param price
      */
-    public void AddSizePrice(String sizeName, Double price){
+    public void addSizePrice(String sizeName, Double price){
         if(sizeName.isEmpty())
             throw new IllegalArgumentException("Empty pizza size name");
         if(price <= 0)
