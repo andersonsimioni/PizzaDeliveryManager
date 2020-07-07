@@ -19,6 +19,10 @@ public class Restaurant {
         //Clients.add(new Client(id, name));
     }
 
+    public void addClientsByFile(String path){
+        Clients.addAll(Client.getClientsByFile(path));
+    }
+
     public  boolean haveClient(int clientId){
         for (Client cl:
              Clients) {
@@ -39,6 +43,7 @@ public class Restaurant {
 
         int id = Orders.size();
         Order order = new Order(id, clientId);
+        Orders.add(order);
     }
 
     public Restaurant(ArrayList<Client> clients, ArrayList<Pizza> pizzas, ArrayList<Order> orders) {
