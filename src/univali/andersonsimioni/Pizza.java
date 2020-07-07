@@ -104,7 +104,7 @@ public class Pizza {
                             try {
                                 JSONArray flavors = (JSONArray) new JSONParser().parse(info.toString());
                                 flavors.forEach(name -> {
-                                    pizza.AddFlavor(name.toString());
+                                    pizza.addFlavor(name.toString());
                                 });
 
                             } catch (ParseException e) {
@@ -113,9 +113,9 @@ public class Pizza {
                         } else if(type.toString().equals("prices")){
                             try {
                                 JSONObject prices = (JSONObject) new JSONParser().parse(info.toString());
-                                pizza.AddSizePrice("small", (Double) prices.get("small"));
-                                pizza.AddSizePrice("medium", (Double) prices.get("medium"));
-                                pizza.AddSizePrice("large", (Double) prices.get("large"));
+                                pizza.addSizePrice("small", (Double) prices.get("small"));
+                                pizza.addSizePrice("medium", (Double) prices.get("medium"));
+                                pizza.addSizePrice("large", (Double) prices.get("large"));
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }

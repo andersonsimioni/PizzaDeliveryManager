@@ -43,7 +43,10 @@ public class Restaurant {
             throw new IllegalArgumentException("Client dont exist");
 
         int id = Orders.size();
-        Order order = new Order(id, clientId);
+        Order order = new Order(id, clientId, false);
+        pizzas.forEach(pizza -> {
+            order.addPizza(pizza.hashCode(),"medium");
+        });
         Orders.add(order);
     }
 

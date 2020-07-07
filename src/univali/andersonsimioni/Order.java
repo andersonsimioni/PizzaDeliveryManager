@@ -25,7 +25,9 @@ public class Order {
     private final ArrayList<Integer> PizzasId;
     private final ArrayList<pizzaSize> PizzasSizes;
 
-    public void AddPizza(int pizzaId, String size){
+    private boolean confirmed;
+
+    public void addPizza(int pizzaId, String size){
         if(pizzaId < 0)
             throw new IllegalArgumentException("Pizza id is smaller than zero");
 
@@ -77,15 +79,30 @@ public class Order {
         return str;
     }
 
-    public Order(int orderId, int clientId) {
-        if(orderId < 0)
+    public Order(int orderId, int clientId, boolean confirmed) {
+        if(orderId < 0) {
             throw new IllegalArgumentException("orderId is smaller than zero");
-        if(clientId < 0)
+        }
+        if(clientId < 0) {
             throw new IllegalArgumentException("clientId is smaller than zero");
+        }
 
         OrderId = orderId;
         ClientId = clientId;
         PizzasId = new ArrayList<Integer>();
         PizzasSizes = new ArrayList<pizzaSize>();
+        this.confirmed = confirmed;
+    }
+
+    public void setConfirmed(boolean confirmed) {
+        this.confirmed = confirmed;
+    }
+
+    public boolean isConfirmed() {
+        return confirmed;
+    }
+
+    public int getClientId() {
+        return ClientId;
     }
 }

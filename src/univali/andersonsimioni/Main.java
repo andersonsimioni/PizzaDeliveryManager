@@ -1,9 +1,6 @@
 package univali.andersonsimioni;
 
-import univali.andersonsimioni.unitTest.TestClient;
-import univali.andersonsimioni.unitTest.TestFile;
-import univali.andersonsimioni.unitTest.TestOrder;
-import univali.andersonsimioni.unitTest.TestPizza;
+import univali.andersonsimioni.unitTest.*;
 
 public class Main {
 
@@ -11,6 +8,7 @@ public class Main {
         //TestPizza.testArray();
         //TestFile.run();
         //TestOrder.newOrder();
-        TestClient.realClientByFile();
+        //TestClient.realClientByFile();
+        TestRestaurant.run();
     }
 }
