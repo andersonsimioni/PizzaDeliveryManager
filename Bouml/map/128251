@@ -418,5 +418,190 @@ format 222
 	
       end
     end
+
+    class 128507 "Restaurant"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129659 "Clients"
+	const_attribute private explicit_type "ArrayList<Client>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129787 "Pizzas"
+	const_attribute private explicit_type "ArrayList<Pizza>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129915 "Orders"
+	const_attribute private explicit_type "ArrayList<Order>"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130043 "Name"
+	const_attribute private explicit_type "String"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130683 "addClient"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "name" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 130811 "addClientsByFile"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "path" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 130939 "haveClient"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "clientId" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 131067 "addOrder"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "clientId" explicit_type "int"
+	  param in name "pizzas" explicit_type "ArrayList<Pizza>"
+	
+	
+	
+	
+	
+      end
+
+      operation 131195 "toString"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 131323 "getClients"
+	public explicit_return_type "ArrayList<Client>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 131451 "getPizzas"
+	public explicit_return_type "ArrayList<pizza>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 131579 "getOrders"
+	public explicit_return_type "ArrayList<Order>"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 131707 "getName"
+	public explicit_return_type "String"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128635 "File"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 131835 "saveClients"
+	stereotype "bool"
+	class_operation public explicit_return_type ""
+	nparams 2
+	  param in name "clients" explicit_type "ArrayList<Client>"
+	  param in name "path" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+
+      operation 131963 "readClients"
+	class_operation public explicit_return_type "ArrayList<Client>"
+	nparams 1
+	  param in name "path" explicit_type "String"
+	
+	
+	
+	
+	
+      end
+    end
   end
 end

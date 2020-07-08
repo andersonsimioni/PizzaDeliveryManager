@@ -27,10 +27,32 @@ classcanvas 128891 class_ref 128379 // Pizza
     ""
       xyzwh 330 367 2000 35 36
 end
+classcanvas 129275 class_ref 128507 // Restaurant
+  classdiagramsettings member_max_width 0 end
+  xyz 455 335 2011
+  constraint 129403
+    hidden
+    end
+    ""
+      xyzwh 720 376 2000 35 36
+end
+classcanvas 129659 class_ref 128635 // File
+  classdiagramsettings member_max_width 0 end
+  xyz 80 566 2000
+  constraint 129787
+    hidden
+    end
+    ""
+      xyzwh 301 607 2000 35 36
+end
 line 128379 -_-_ decenter_begin 565
   from ref 128123 z 2001 to ref 128251
 line 128763 -_-_
   from ref 128507 z 2007 to ref 128635
 line 129147 -_-_
   from ref 128891 z 2007 to ref 129019
+line 129531 -_-_
+  from ref 129275 z 2012 to ref 129403
+line 129915 -_-_
+  from ref 129659 z 2001 to ref 129787
 end

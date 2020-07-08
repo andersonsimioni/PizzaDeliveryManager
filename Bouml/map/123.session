@@ -1,0 +1,12 @@
+window_sizes 960 1004 450 504 818 128
+
+diagrams
+  active  classdiagram_ref 128123 // main_classes_diagram
+    504 818 100 A4 0 0
+end
+show_stereotypes
+selected operation_ref 131835 // saveClients
+open
+  class_ref 128635 // File
+end
+end
